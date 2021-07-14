@@ -38,7 +38,7 @@
   OcGuardLib|OpenCorePkg/Library/OcGuardLib/OcGuardLib.inf
   OcCpuLib|OpenCorePkg/Library/OcCpuLib/OcCpuLib.inf
   OcStringLib|OpenCorePkg/Library/OcStringLib/OcStringLib.inf
-  OcDevicePathLib|OpenCorePkg/Library/OpenCoreDevicePathLib/OpenCoreDevicePathLib.inf
+  OcDevicePathLib|OpenCorePkg/Library/OcDevicePathLib/OcDevicePathLib.inf
   OcFilePathLib|OpenCorePkg/Library/OcFilePathLib/OcFilePathLib.inf
   OcMiscLib|OpenCorePkg/Library/OcMiscLib/OcMiscLib.inf
   OcDataHubLib|OpenCorePkg/Library/OcDataHubLib/OcDataHubLib.inf
