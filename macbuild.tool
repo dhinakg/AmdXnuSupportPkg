@@ -93,8 +93,14 @@ if [ "$ARCHS" = "" ]; then
 fi
 SELFPKG=AmdXnuSupportPkg
 NO_ARCHIVES=0
+DEPNAMES=('OpenCorePkg')
+DEPURLS=('https://github.com/acidanthera/OpenCorePkg')
+DEPBRANCHES=('master')
 
 export SELFPKG
 export NO_ARCHIVES
+export DEPNAMES
+export DEPURLS
+export DEPBRANCHES
 
 src=$(curl -Lfs https://raw.githubusercontent.com/acidanthera/ocbuild/master/efibuild.sh) && eval "$src" || exit 1
