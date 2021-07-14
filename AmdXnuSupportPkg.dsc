@@ -39,7 +39,7 @@
   OcCpuLib|OpenCorePkg/Library/OcCpuLib/OcCpuLib.inf
   OcStringLib|OpenCorePkg/Library/OcStringLib/OcStringLib.inf
   OcDevicePathLib|OpenCorePkg/Library/OcDevicePathLib/OcDevicePathLib.inf
-  OcFilePathLib|OpenCorePkg/Library/OcFilePathLib/OcFilePathLib.inf
+  OcFileLib|OpenCorePkg/Library/OcFileLib/OcFileLib.inf
   OcMiscLib|OpenCorePkg/Library/OcMiscLib/OcMiscLib.inf
   OcDataHubLib|OpenCorePkg/Library/OcDataHubLib/OcDataHubLib.inf
   DebugLib|OpenCorePkg/Library/OcDebugLogLib/OcDebugLogLib.inf
