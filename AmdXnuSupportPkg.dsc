@@ -35,7 +35,7 @@
   LocalApicLib|UefiCpuPkg/Library/BaseXApicX2ApicLib/BaseXApicX2ApicLib.inf
 
 [LibraryClasses.common.DXE_DRIVER]
-  DebugLib|OcSupportPkg/Library/OcDebugLogLib/OcDebugLogLib.inf
+  DebugLib|OpenCorePkg/Library/OcDebugLogLib/OcDebugLogLib.inf
   HobLib|MdePkg/Library/DxeHobLib/DxeHobLib.inf
   MemoryAllocationLib|MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf
   UefiBootServicesTableLib|MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.inf
