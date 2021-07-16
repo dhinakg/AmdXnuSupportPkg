@@ -26,7 +26,8 @@ package() {
     mkdir -p "${dstdir}/${arch}" || exit 1
 
     # copy DXE drivers.
-    cp "${arch}/*.efi" "${dstdir}/${arch}" || exit 1
+    cp "${arch}/AmdIntelEmuDxe.efi" "${dstdir}/${arch}" || exit 1
+    cp "${arch}/AmdIntelEmuRuntime.efi" "${dstdir}/${arch}" || exit 1
   done
 
   pushd "${dstdir}" || exit 1
