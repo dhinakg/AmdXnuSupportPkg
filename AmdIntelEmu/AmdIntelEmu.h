@@ -252,7 +252,7 @@ typedef union {
   UINT32 Uint32;
 } AMD_VMCB_CLEAN_FIELD;
 
-VERIFY_SIZE_OF (AMD_VMCB_CLEAN_FIELD, 4);
+STATIC_ASSERT (sizeof (AMD_VMCB_CLEAN_FIELD) == 4, "AMD_VMCB_CLEAN_FIELD is expected to be 4 bytes");
 
 typedef enum {
   AmdVmcbIntr              = 0,
@@ -273,7 +273,7 @@ typedef union {
   UINT64 Uint64;
 } AMD_VMCB_EVENT;
 
-VERIFY_SIZE_OF (AMD_VMCB_EVENT, 8);
+STATIC_ASSERT (sizeof (AMD_VMCB_EVENT) == 8, "AMD_VMCB_EVENT is expected to be 8 bytes");
 
 typedef union {
   PACKED struct {
@@ -430,7 +430,7 @@ typedef PACKED struct {
   UINT8  Reserved17[752];
 } AMD_VMCB_CONTROL_AREA;
 
-VERIFY_SIZE_OF (AMD_VMCB_CONTROL_AREA, 0x400);
+STATIC_ASSERT (sizeof (AMD_VMCB_CONTROL_AREA) == 0x400, "AMD_VMCB_CONTROL_AREA is expected to be 0x400 bytes");
 
 typedef PACKED struct {
   UINT16 Selector;
@@ -484,7 +484,7 @@ typedef PACKED struct {
   UINT64                       LASTEXCPTO;
 } AMD_VMCB_SAVE_STATE_AREA_NON_ES;
 
-VERIFY_SIZE_OF (AMD_VMCB_SAVE_STATE_AREA_NON_ES, 0x298);
+STATIC_ASSERT (sizeof (AMD_VMCB_SAVE_STATE_AREA_NON_ES) == 0x298, "AMD_VMCB_SAVE_STATE_AREA_NON_ES is expected to be 0x298 bytes");
 
 typedef PACKED struct {
   // rax shall be accessed via VMCB.
