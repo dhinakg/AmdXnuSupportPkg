@@ -25,56 +25,8 @@ package() {
   for arch in "${ARCHS[@]}"; do
     mkdir -p "${dstdir}/${arch}" || exit 1
 
-    # copy OpenCore main program.
-    ls "${arch}"
-    cp "${arch}/OpenCore.efi" "${dstdir}/${arch}/EFI/OC" || exit 1
-
-    local suffix="${arch}"
-    if [ "${suffix}" = "X64" ]; then
-      suffix="x64"
-    fi
-    cp "${arch}/Bootstrap.efi" "${dstdir}/${arch}/EFI/BOOT/BOOT${suffix}.efi" || exit 1
-    cp "${ocflavour}" "${dstdir}/${arch}/EFI/BOOT" || exit 1
-
-    efiTools=(
-      "BootKicker.efi"
-      "ChipTune.efi"
-      "CleanNvram.efi"
-      "CsrUtil.efi"
-      "GopStop.efi"
-      "KeyTester.efi"
-      "MmapDump.efi"
-      "ResetSystem.efi"
-      "RtcRw.efi"
-      "TpmInfo.efi"
-      "OpenControl.efi"
-      "ControlMsrE2.efi"
-      )
-    for efiTool in "${efiTools[@]}"; do
-      cp "${arch}/${efiTool}" "${dstdir}/${arch}/EFI/OC/Tools"/ || exit 1
-    done
-
-    # Special case: OpenShell.efi
-    cp "${arch}/Shell.efi" "${dstdir}/${arch}/EFI/OC/Tools/OpenShell.efi" || exit 1
-
-    efiDrivers=(
-      "HiiDatabase.efi"
-      "NvmExpressDxe.efi"
-      "AudioDxe.efi"
-      "CrScreenshotDxe.efi"
-      "OpenCanopy.efi"
-      "OpenPartitionDxe.efi"
-      "OpenRuntime.efi"
-      "OpenUsbKbDxe.efi"
-      "Ps2MouseDxe.efi"
-      "Ps2KeyboardDxe.efi"
-      "UsbMouseDxe.efi"
-      "OpenHfsPlus.efi"
-      "XhciDxe.efi"
-      )
-    for efiDriver in "${efiDrivers[@]}"; do
-      cp "${arch}/${efiDriver}" "${dstdir}/${arch}/EFI/OC/Drivers"/ || exit 1
-    done
+    # copy DXE drivers.
+    cp "${arch}/*.efi" "${dstdir}/${arch}" || exit 1
   done
 
   pushd "${dstdir}" || exit 1
